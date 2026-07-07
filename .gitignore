@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+data/raw/
+data/staged/
+data/cache/
+data/qdrant/
+data/qdrant_smoke_hash/
+data/qdrant_smoke_real/
+data/reliability_baselines/

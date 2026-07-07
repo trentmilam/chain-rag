@@ -1,0 +1,29 @@
+version: 1
+documents:
+  - id: btc-whitepaper
+    chain: bitcoin
+    title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+    source_url: "https://bitcoin.org/bitcoin.pdf"
+    local_path: "data/raw/bitcoin/btc-whitepaper.pdf"
+    format: pdf
+    doc_type: whitepaper
+    license_note: "widely mirrored, no explicit copyright claim asserted by bitcoin.org"
+
+  - id: eip-20
+    chain: ethereum
+    title: "ERC-20: Token Standard"
+    source_url: "https://eips.ethereum.org/EIPS/eip-20"
+    local_path: "data/raw/ethereum/eip-20.html"
+    format: html
+    doc_type: eip
+    license_note: "CC0 1.0 Universal (Ethereum EIPs)"
+
+  - id: ocr-fixture
+    chain: bitcoin
+    title: "Synthetic OCR smoke fixture (image-only PDF)"
+    source_url: "internal:synthetic-smoke-fixture"
+    local_path: "data/raw/bitcoin/ocr-fixture.pdf"
+    format: pdf
+    doc_type: docs
+    ocr_required: true
+    license_note: "synthetic test fixture, generated locally, not a real source document"

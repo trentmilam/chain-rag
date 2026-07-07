@@ -1,0 +1,205 @@
+version: 1
+documents:
+  # ---------------------------------------------------------------- bitcoin
+  - id: btc-whitepaper
+    chain: bitcoin
+    title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+    source_url: "https://bitcoin.org/bitcoin.pdf"
+    local_path: "data/raw/bitcoin/btc-whitepaper.pdf"
+    format: pdf
+    doc_type: whitepaper
+    license_note: "widely mirrored, no explicit copyright claim asserted by bitcoin.org"
+
+  - id: bip-32
+    chain: bitcoin
+    title: "BIP-32: Hierarchical Deterministic Wallets"
+    source_url: "https://raw.githubusercontent.com/bitcoin/bips/master/bip-0032.mediawiki"
+    local_path: "data/raw/bitcoin/bip-32.mediawiki"
+    format: mediawiki
+    doc_type: bip
+    license_note: "BSD-2-Clause per the BIP's own header (author Pieter Wuille); official bitcoin/bips repo"
+
+  - id: bip-141
+    chain: bitcoin
+    title: "BIP-141: Segregated Witness (Consensus layer)"
+    source_url: "https://raw.githubusercontent.com/bitcoin/bips/master/bip-0141.mediawiki"
+    local_path: "data/raw/bitcoin/bip-141.mediawiki"
+    format: mediawiki
+    doc_type: bip
+    license_note: "official bitcoin/bips repo; BIP declares a license field in its header (BSD-2-Clause family)"
+
+  - id: bip-143
+    chain: bitcoin
+    title: "BIP-143: Transaction Signature Verification for Version 0 Witness Program"
+    source_url: "https://raw.githubusercontent.com/bitcoin/bips/master/bip-0143.mediawiki"
+    local_path: "data/raw/bitcoin/bip-143.mediawiki"
+    format: mediawiki
+    doc_type: bip
+    license_note: "official bitcoin/bips repo; BIP declares a license field in its header (BSD-2-Clause family)"
+
+  - id: bip-340
+    chain: bitcoin
+    title: "BIP-340: Schnorr Signatures for secp256k1"
+    source_url: "https://raw.githubusercontent.com/bitcoin/bips/master/bip-0340.mediawiki"
+    local_path: "data/raw/bitcoin/bip-340.mediawiki"
+    format: mediawiki
+    doc_type: bip
+    license_note: "official bitcoin/bips repo; Taproot-family BIP set uses BSD-3-Clause per BIP-341's header"
+
+  - id: bip-341
+    chain: bitcoin
+    title: "BIP-341: Taproot: SegWit version 1 spending rules"
+    source_url: "https://raw.githubusercontent.com/bitcoin/bips/master/bip-0341.mediawiki"
+    local_path: "data/raw/bitcoin/bip-341.mediawiki"
+    format: mediawiki
+    doc_type: bip
+    license_note: "BSD-3-Clause per the BIP's own header (authors Wuille, Nick, Towns); official bitcoin/bips repo"
+
+  # --------------------------------------------------------------- ethereum
+  - id: eip-20
+    chain: ethereum
+    title: "ERC-20: Token Standard"
+    source_url: "https://eips.ethereum.org/EIPS/eip-20"
+    local_path: "data/raw/ethereum/eip-20.html"
+    format: html
+    doc_type: eip
+    license_note: "CC0 1.0 Universal (Ethereum EIPs)"
+
+  - id: ethereum-yellowpaper
+    chain: ethereum
+    title: "Ethereum: A Secure Decentralised Generalised Transaction Ledger (Yellow Paper)"
+    source_url: "https://ethereum.github.io/yellowpaper/paper.pdf"
+    local_path: "data/raw/ethereum/ethereum-yellowpaper.pdf"
+    format: pdf
+    doc_type: spec
+    license_note: "CC-BY-SA 4.0 per the ethereum/yellowpaper source repo"
+
+  - id: eip-721
+    chain: ethereum
+    title: "ERC-721: Non-Fungible Token Standard"
+    source_url: "https://eips.ethereum.org/EIPS/eip-721"
+    local_path: "data/raw/ethereum/eip-721.html"
+    format: html
+    doc_type: eip
+    license_note: "CC0 1.0 Universal (Ethereum EIPs)"
+
+  - id: eip-1559
+    chain: ethereum
+    title: "EIP-1559: Fee Market Change for ETH 1.0 Chain"
+    source_url: "https://eips.ethereum.org/EIPS/eip-1559"
+    local_path: "data/raw/ethereum/eip-1559.html"
+    format: html
+    doc_type: eip
+    license_note: "CC0 1.0 Universal (Ethereum EIPs)"
+
+  - id: eip-4844
+    chain: ethereum
+    title: "EIP-4844: Shard Blob Transactions"
+    source_url: "https://eips.ethereum.org/EIPS/eip-4844"
+    local_path: "data/raw/ethereum/eip-4844.html"
+    format: html
+    doc_type: eip
+    license_note: "CC0 1.0 Universal (Ethereum EIPs)"
+
+  # ----------------------------------------------------------------- solana
+  - id: solana-whitepaper
+    chain: solana
+    title: "Solana: A New Architecture for a High Performance Blockchain (v0.8.13)"
+    source_url: "https://solana.com/solana-whitepaper.pdf"
+    local_path: "data/raw/solana/solana-whitepaper.pdf"
+    format: pdf
+    doc_type: whitepaper
+    license_note: "official whitepaper hosted on solana.com; no explicit reuse license stated, freely publicly distributed"
+
+  - id: solana-poh-synchronization
+    chain: solana
+    title: "Synchronization (Proof of History) -- Agave Validator Documentation"
+    source_url: "https://docs.anza.xyz/consensus/synchronization"
+    local_path: "data/raw/solana/solana-poh-synchronization.html"
+    format: html
+    doc_type: docs
+    license_note: "official Agave (Solana validator client) developer docs, publicly readable"
+
+  - id: solana-sealevel
+    chain: solana
+    title: "Sealevel -- Parallel Processing Thousands of Smart Contracts"
+    source_url: "https://medium.com/solana-labs/sealevel-parallel-processing-thousands-of-smart-contracts-d814b378192"
+    local_path: "data/raw/solana/solana-sealevel.html"
+    format: html
+    doc_type: docs
+    license_note: "original technical post by Anatoly Yakovenko on the official Solana Medium publication, freely readable"
+
+  # ----------------------------------------------------------------- monero
+  - id: cryptonote-whitepaper
+    chain: monero
+    title: "CryptoNote v2.0 Whitepaper (Nicolas van Saberhagen, 2013)"
+    source_url: "https://www.getmonero.org/resources/research-lab/pubs/cryptonote-whitepaper.pdf"
+    local_path: "data/raw/monero/cryptonote-whitepaper.pdf"
+    format: pdf
+    doc_type: whitepaper
+    license_note: "mirrored openly by Monero's own official research library, freely downloadable, no explicit license stated"
+
+  - id: monero-ringct
+    chain: monero
+    title: "Ring Confidential Transactions (Shen Noether, MRL-0005, 2015)"
+    source_url: "https://www.getmonero.org/resources/research-lab/pubs/MRL-0005.pdf"
+    local_path: "data/raw/monero/monero-ringct.pdf"
+    format: pdf
+    doc_type: whitepaper
+    license_note: "open Monero Research Lab bulletin, freely downloadable from getmonero.org, no explicit license stated"
+
+  - id: monero-zero-to-monero
+    chain: monero
+    title: "Zero to Monero: Second Edition (Koe, Alonso, Noether)"
+    source_url: "https://www.getmonero.org/library/Zero-to-Monero-2-0-0.pdf"
+    local_path: "data/raw/monero/monero-zero-to-monero.pdf"
+    format: pdf
+    doc_type: docs
+    license_note: "published openly by the Monero project's public technical library for free research/education use"
+
+  # ---------------------------------------------------------------- polygon
+  - id: matic-whitepaper
+    chain: polygon
+    title: "Matic Network Whitepaper v1.1 (PoS sidechain / checkpointing model)"
+    source_url: "https://raw.githubusercontent.com/maticnetwork/whitepaper/master/README.md"
+    local_path: "data/raw/polygon/matic-whitepaper.md"
+    format: md
+    doc_type: whitepaper
+    license_note: "official maticnetwork/whitepaper GitHub repo; no LICENSE file present (default copyright), openly published for reading/citation"
+
+  - id: polygon-pos-architecture-overview
+    chain: polygon
+    title: "Polygon PoS Architecture Overview"
+    source_url: "https://docs.polygon.technology/pos/architecture/overview/"
+    local_path: "data/raw/polygon/polygon-pos-architecture-overview.html"
+    format: html
+    doc_type: docs
+    license_note: "official Polygon Labs developer documentation, freely and publicly accessible"
+
+  - id: polygon-zkevm-proving-system
+    chain: polygon
+    title: "Polygon zkEVM Architecture, Part 1: Proving System Principles"
+    source_url: "https://raw.githubusercontent.com/0xPolygon/zkevm-techdocs/main/slides/zkevm-architecture-part1-proving-system-principles.pdf"
+    local_path: "data/raw/polygon/polygon-zkevm-proving-system.pdf"
+    format: pdf
+    doc_type: spec
+    license_note: "CC0-1.0 (0xPolygon/zkevm-techdocs repo is explicitly public-domain-dedicated)"
+
+  # ---------------------------------------------------------------- cardano
+  - id: cardano-ouroboros
+    chain: cardano
+    title: "Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol (abstract + citation page)"
+    source_url: "https://www.iog.io/papers/ouroboros-a-provably-secure-proof-of-stake-blockchain-protocol"
+    local_path: "data/raw/cardano/cardano-ouroboros.html"
+    format: html
+    doc_type: whitepaper
+    license_note: "IOG's own citation page for the CRYPTO'17 paper; the full IACR ePrint PDF blocks automated fetches (verified: HTTP 403), so only the abstract is available here -- documented gap, not a full-paper mirror"
+
+  - id: cardano-plutus
+    chain: cardano
+    title: "Plinth User Guide (Plinth and Plutus Core Documentation)"
+    source_url: "https://plutus.cardano.intersectmbo.org/docs/"
+    local_path: "data/raw/cardano/cardano-plutus.html"
+    format: html
+    doc_type: docs
+    license_note: "Apache-2.0 (generated from the IntersectMBO/plutus repository)"
