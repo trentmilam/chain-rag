@@ -72,9 +72,6 @@ proves genuine semantic retrieval end-to-end, not wiring alone. Eight checks:
 - one **out-of-scope** question ("How do you properly season a cast iron
   skillet?") — asserts an honest abstain.
 
-`python scripts/run_all_evals.py` (framework-root aggregator) picks this eval up
-alongside the other portfolio evals.
-
 ## A measured finding, not a hidden one: real dense embedders need per-corpus calibration
 
 Consilium's `Router` ships library defaults (`floor=0.11`, `anchor_centroid=0.25`,
