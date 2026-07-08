@@ -96,7 +96,7 @@ _CHAIN_DESCRIPTORS = {
 # signal at this corpus scale. These are per-instance Router/compose kwargs
 # (both are the library's own documented calibration knobs, not internal
 # consilium state) recalibrated for chain-rag's own embedder+corpus pair only;
-# consilium's shared defaults (used by e.g. wealth-platform's own instance)
+# consilium's shared defaults (used by every other Consilium instance)
 # are untouched.
 ROUTER_KWARGS = {"floor": 0.42, "anchor_centroid": 0.58, "anchor_best_chunk": 0.97}
 

@@ -48,7 +48,7 @@ EXAMPLES = [
 ]
 
 # ---------------------------------------------------------------------------
-# Theme -- same quiet SaaS chrome as wealth-platform (one neutral surface, one
+# Theme -- a quiet SaaS chrome (one neutral surface, one
 # accent, plain status pills), a distinct indigo accent for this tool's identity.
 # ---------------------------------------------------------------------------
 _BG = "#F7F8FA"

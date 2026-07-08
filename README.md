@@ -1,18 +1,17 @@
 # chain-rag
 
 A real, cited retrieval system over primary blockchain protocol documentation —
-Bitcoin, Ethereum, Solana, Monero, Polygon, and Cardano — built on [Consilium](../consilium)'s
-router/citation-gating spine and [RAGpack](../RAGpack)'s embedder/chunker/vector-store
+Bitcoin, Ethereum, Solana, Monero, Polygon, and Cardano — built on [Consilium](https://github.com/trentmilam/consilium)'s
+router/citation-gating spine and [RAGpack](https://github.com/trentmilam/RAGpack)'s embedder/chunker/vector-store
 machinery. Ask a real technical question about any of the six chains (or one that
 spans two of them) and get back an answer built entirely out of real cited chunks
 from the source documents, or an honest abstain. There is no LLM anywhere in the
 answer path — retrieval + a deterministic router + a citation-integrity gate,
 nothing else, so every line of every answer traces to an actual document.
 
-This is a second, independent vertical proving the same architecture pattern
-[wealth-platform](../wealth-platform) already established generalizes: a standalone
-domain, its own Consilium `Registry`/`Router` instance, zero coupling between the
-two, sharing only the generic library underneath.
+It is a second, independent vertical on the same architecture: its own Consilium
+`Registry`/`Router` instance for a standalone domain, zero coupling to any other
+vertical, sharing only the generic library underneath.
 
 ## Honest scope: this repo is NOT standalone
 
@@ -24,6 +23,13 @@ projects/
   consilium/          <- the routing spine (Registry, Router, compose/integrity gate)
   rag-reliability/     <- VecStamp / ChunkLedger / Plumbline / Legigate gate tools
   chain-rag/            <- this repo
+```
+
+Clone both siblings next to this repo:
+
+```
+git clone https://github.com/trentmilam/consilium
+git clone https://github.com/trentmilam/rag-reliability
 ```
 
 Neither is pip-installed or vendored; each is imported by putting its repo root
@@ -86,9 +92,9 @@ every query, on-topic or not, cited all six chains indiscriminately.
 `chainrag/bootstrap.py::ROUTER_KWARGS` recalibrates `floor`/`anchor_centroid`/
 `anchor_best_chunk` for this embedder+corpus pair specifically, using Consilium's
 own documented per-instance constructor kwargs — Consilium's shared source and its
-library-wide defaults (which `wealth-platform`'s own, separate `Router` instance
-still uses) are untouched. This is the kind of gap the reliability-gate suite
-below is built to surface rather than paper over.
+library-wide defaults (which every other Consilium instance still uses) are
+untouched. This is the kind of gap the reliability-gate suite below is built to
+surface rather than paper over.
 
 ## Reliability gates
 

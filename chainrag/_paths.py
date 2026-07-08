@@ -2,11 +2,11 @@
 
 chain-rag is deliberately NOT standalone: it reuses ``consilium`` (the routing/
 citation-gating spine, as a library, own Registry instance -- zero coupling to
-wealth-platform's instance) and 4 of ``rag-reliability``'s gate tools, both living
+any other Consilium instance) and 4 of ``rag-reliability``'s gate tools, both living
 as SIBLING directories under the same ``projects/`` root, each its own git repo.
 None of them are pip-installed; each is imported by putting its root on
-``sys.path``. This is the exact convention ``wealth-platform/wealthplatform/_paths.py``
-already established.
+``sys.path``. Both siblings are public repos -- clone them next to this one
+(see the README).
 
 (RAGpack, unlike these, IS pip-installed editable into chain-rag's own venv --
 ``import ragpack`` needs no sys.path entry here.)

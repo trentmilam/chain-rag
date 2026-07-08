@@ -17,8 +17,8 @@ BAAI/bge-base-en-v1.5 dense embedder over this 1100-chunk corpus (best-chunk cos
 a max over ~1100 chunks, is a saturated order statistic that clears 0.25 for almost
 any query, including gibberish). This is measured, not assumed: see
 chainrag.bootstrap.ROUTER_KWARGS for the diagnostic numbers and the recalibrated,
-per-instance threshold values used below -- consilium's own shared defaults (e.g.
-wealth-platform's separate Router instance) are untouched; this is chain-rag's own
+per-instance threshold values used below -- consilium's own shared defaults (used
+by every other Consilium instance) are untouched; this is chain-rag's own
 Router instantiation exercising the library's documented constructor kwargs.
 
     python eval/eval_chainrag.py
