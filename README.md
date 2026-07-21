@@ -15,8 +15,8 @@ vertical, sharing only the generic library underneath.
 
 ## Honest scope: this repo is NOT standalone
 
-`chain-rag` imports two **sibling directories** that must sit next to it under the
-same `projects/` root:
+`chain-rag` imports **sibling directories** that sit next to it under the same
+`projects/` root:
 
 ```
 projects/
@@ -25,19 +25,23 @@ projects/
   chain-rag/            <- this repo
 ```
 
-Clone both siblings next to this repo:
+`consilium` is required — clone it next to this repo:
 
 ```
 git clone https://github.com/trentmilam/consilium
-git clone https://github.com/trentmilam/rag-reliability
 ```
 
-Neither is pip-installed or vendored; each is imported by putting its repo root
-(or, for `rag-reliability`, each individual tool subdir — it has no `__init__.py`)
-directly on `sys.path`. See `chainrag/_paths.py::add_sibling_paths()`, called by
-every entry file before importing anything from a sibling repo. `RAGpack`, unlike
-these two, **is** pip-installed editable into chain-rag's own `.venv` — `import
-ragpack` needs no sys.path entry.
+`rag-reliability` is **not published yet**, and this repo does not need it to run.
+Exactly one file imports it — `scripts/run_reliability_gates.py`, the offline
+gate-audit script. The chat UI, the ingest pipeline and the eval all run without
+it; only that one script is unavailable until the repo goes public.
+
+Neither sibling is pip-installed or vendored; each is imported by putting its repo
+root (or, for `rag-reliability`, each individual tool subdir — it has no
+`__init__.py`) directly on `sys.path`. See `chainrag/_paths.py::add_sibling_paths()`,
+called by every entry file before importing anything from a sibling repo. `RAGpack`,
+unlike these two, **is** pip-installed editable into chain-rag's own `.venv` —
+`import ragpack` needs no sys.path entry.
 
 Move this repo without `consilium` and every import fails immediately and loudly —
 there is no silent degraded mode.
